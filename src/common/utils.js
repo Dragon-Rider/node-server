@@ -2,8 +2,6 @@
  * 脚手架文件，各种公用方法集合
  * Created by Eragon on 2017-08-18
  */
-const ENUM = require('./ENUM');
-
 module.exports = {
     /**
      * getDomain 根据pageUrl获取domain
@@ -49,6 +47,6 @@ module.exports = {
         }
 
         return url.substring(0, pos);
-    }
+    },
 };
 

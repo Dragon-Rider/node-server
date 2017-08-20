@@ -16,13 +16,13 @@ apiRouter.get('/province/list', function() {
         code: ENUM.RET_SUCCESS.code,
         msg: ENUM.RET_SUCCESS.msg,
         data: [{
-            id: 001,
+            id: '001',
             name: 'option1',
         }, {
-            id: 002,
+            id: '002',
             name: 'option2',
         }, {
-            id: 003,
+            id: '003',
             name: 'option3',
         }]
     };
