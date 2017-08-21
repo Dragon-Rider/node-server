@@ -6,7 +6,6 @@
 
 # temp file for git conflict merging
 *.orig
-*.log
 *.rej
 *.swo
 *.swp
@@ -39,8 +38,6 @@ jscoverage_lib/
 .imdone/
 
 # Files to ignore
-.eslintrc.js
-.node-dev.json
 .hg
 .svn
 .CVS
