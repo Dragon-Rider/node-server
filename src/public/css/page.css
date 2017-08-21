@@ -11,3 +11,8 @@ button {
     outline: 0;
     border-radius: 4px;
 }
+
+p {
+    border: 1px #ddd solid;
+    width: 180px;
+}

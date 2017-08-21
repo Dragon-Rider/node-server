@@ -5,6 +5,7 @@ const mount = require('koa-mount');
 const render = require('koa-ejs');
 const path = require('path');
 const logger = require('koa-logger');
+const onerror = require('koa-onerror');
 
 const staticDirectory = staticServe(__dirname + '/src/public');
 const router = require('./src/routes');
@@ -17,6 +18,9 @@ render(app, {
     viewExt: 'ejs',
     layout: false
 });
+
+// 错误监听
+onerror(app);
 
 app .use(logger())
     .use(mount('/static', staticDirectory))

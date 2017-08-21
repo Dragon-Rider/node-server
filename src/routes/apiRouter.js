@@ -11,7 +11,7 @@ const apiRouter = new Router({
     prefix: '/ajax',
 });
 
-apiRouter.get('/province/list', function() {
+apiRouter.get('/list', function() {
     const result = {
         code: ENUM.RET_SUCCESS.code,
         msg: ENUM.RET_SUCCESS.msg,
