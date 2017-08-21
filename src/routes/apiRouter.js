@@ -5,13 +5,13 @@
 
 const Router = require('koa-router');
 const ENUM = require('../common/ENUM');
-const ipInfoContr = require('../controllers/ipInfoController');
+const userInfoContr = require('../controllers/userInfoController');
 
 const apiRouter = new Router({
     prefix: '/ajax',
 });
 
-apiRouter.get('/list', function() {
+apiRouter.get('/list', function () {
     const result = {
         code: ENUM.RET_SUCCESS.code,
         msg: ENUM.RET_SUCCESS.msg,
@@ -24,16 +24,16 @@ apiRouter.get('/list', function() {
         }, {
             id: '003',
             name: 'option3',
-        }]
+        }],
     };
 
     this.body = result;
 });
 
-apiRouter.get('/ipInfo', function* () {
+apiRouter.get('/userInfo', function* () {
     let result = null;
 
-    result = yield ipInfoContr.getIpInfo(this.request.ip);
+    result = yield userInfoContr.getUserinfo(this.request.ip);
 
     this.body = result;
 });

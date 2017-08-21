@@ -21,8 +21,8 @@
     "koa-onerror": "^3.1.0",
     "koa-router": "^5.1.2",
     "koa-static": "^4.0.1",
-    "koa-views": "^6.0.2",
-    "then-request": "^4.1.0"
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
