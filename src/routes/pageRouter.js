@@ -17,4 +17,8 @@ pageRouter.get('/page', function* () {
     });
 });
 
+pageRouter.get('/', function* () {
+    yield this.render('demo');
+});
+
 module.exports = pageRouter;

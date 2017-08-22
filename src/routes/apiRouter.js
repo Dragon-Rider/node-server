@@ -1,6 +1,6 @@
 /**
  * Ajax接口路由
- * Created by Eragon on 2017-08-08
+ * Created by Eragon on 2017-08-18
  */
 
 const Router = require('koa-router');
@@ -19,23 +19,5 @@ apiRouter.get('/userInfo', function* () {
     this.body = result;
 });
 
-apiRouter.get('/list', function () {
-    const result = {
-        code: ENUM.RET_SUCCESS.code,
-        msg: ENUM.RET_SUCCESS.msg,
-        data: [{
-            id: '001',
-            name: 'option1',
-        }, {
-            id: '002',
-            name: 'option2',
-        }, {
-            id: '003',
-            name: 'option3',
-        }],
-    };
-
-    this.body = result;
-});
 
 module.exports = apiRouter;

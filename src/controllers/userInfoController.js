@@ -7,8 +7,8 @@ const cityInfoModel = require('../models/cityInfoModel');
 
 const getUserinfo = function (ip) {
     let result = {};
-    result.res1 = ipInfoModel.getIpInfo(ip);
-    result.res2 = cityInfoModel.getCityInfo();
+    result.ipInfo = ipInfoModel.getIpInfo(ip);
+    result.dbCityList = cityInfoModel.getCityInfo();
 
     return result;
 };
