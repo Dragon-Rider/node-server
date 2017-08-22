@@ -4,7 +4,6 @@
  */
 
 const Router = require('koa-router');
-const ENUM = require('../common/ENUM');
 const userInfoContr = require('../controllers/userInfoController');
 
 const apiRouter = new Router({

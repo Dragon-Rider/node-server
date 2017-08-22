@@ -10,7 +10,7 @@ const ENUM = require('../common/ENUM');
  * @param  {string} ip ip字符串
  * @return {object}    ip信息对象
  */
-const getIpInfo = function*(ip) {
+const getIpInfo = function* (ip) {
     const options = {
         url: ENUM.IP_INFO_SERVER,
         method: 'GET',
@@ -25,5 +25,5 @@ const getIpInfo = function*(ip) {
 };
 
 module.exports = {
-    getIpInfo
+    getIpInfo,
 };
