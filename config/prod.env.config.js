@@ -10,7 +10,7 @@ const mysqlConfig = {
 };
 
 // app运行端口号
-const listenPort = 80;
+const listenPort = 8080;
 
 module.exports = {
     mysqlConfig,

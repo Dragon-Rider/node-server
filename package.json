@@ -21,8 +21,10 @@
     "koa-onerror": "^3.1.0",
     "koa-router": "^5.1.2",
     "koa-static": "^4.0.1",
+    "mysql": "^2.14.1",
     "request": "^2.81.0",
-    "request-promise": "^4.2.1"
+    "request-promise": "^4.2.1",
+    "thunkify": "^2.1.2"
   },
   "devDependencies": {
     "eslint": "^3.0.0",

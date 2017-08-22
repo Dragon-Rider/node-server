@@ -11,6 +11,14 @@ const apiRouter = new Router({
     prefix: '/ajax',
 });
 
+apiRouter.get('/userInfo', function* () {
+    let result = null;
+
+    result = yield userInfoContr.getUserinfo(this.request.ip);
+
+    this.body = result;
+});
+
 apiRouter.get('/list', function () {
     const result = {
         code: ENUM.RET_SUCCESS.code,
@@ -26,14 +34,6 @@ apiRouter.get('/list', function () {
             name: 'option3',
         }],
     };
-
-    this.body = result;
-});
-
-apiRouter.get('/userInfo', function* () {
-    let result = null;
-
-    result = yield userInfoContr.getUserinfo(this.request.ip);
 
     this.body = result;
 });
