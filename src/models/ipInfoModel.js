@@ -12,15 +12,15 @@ module.exports = {
      * @return {object}    ip信息对象
      */
     * getIpInfo(ip) {
-        //ip = "211.161.244.241";
+        // ip = "211.161.244.241";
         const options = {
             url: ENUM.IP_INFO_SERVER,
             method: 'GET',
-            qs:{
-                'ip': ip
+            qs: {
+                ip,
             },
-            json: true
-        }
+            json: true,
+        };
         const res = yield request(options);
 
         return res.data;

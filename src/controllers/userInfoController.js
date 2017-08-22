@@ -5,15 +5,15 @@
 const ipInfoModel = require('../models/ipInfoModel');
 const cityInfoModel = require('../models/cityInfoModel');
 
-const getUserinfo = function(ip){
-    /*ip = "211.161.244.241";*/
-    const res1 =  ipInfoModel.getIpInfo(ip);
-    const res2 =  cityInfoModel.getCityInfo();
+const getUserinfo = function (ip) {
+    let result = {};
+    result.res1 = ipInfoModel.getIpInfo(ip);
+    result.res2 = cityInfoModel.getCityInfo();
 
-    return res2;
+    return result;
 };
 
 
 module.exports = {
-    getUserinfo
+    getUserinfo,
 };

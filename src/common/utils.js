@@ -2,11 +2,22 @@
  * 脚手架文件，各种公用方法集合
  * Created by Eragon on 2017-08-18
  */
+const mysql = require('mysql');
+const config = require('../../config/');
+
 module.exports = {
     /**
+     * getDomain 链接数据库
+     * @return {string}    pool;
+    */
+    creatMysqlPool() {
+        return mysql.createPool(config.mysqlConfig);
+    },
+
+    /**
      * getDomain 根据pageUrl获取domain
-     * @param  {string} url url
-     * @return {string}     domain
+     * @param  {string}    url
+     * @return {string}    domain
      */
     getDomain(url) {
         const urlWithoutProtocol = url.split('//')[1];
@@ -17,15 +28,6 @@ module.exports = {
         }
 
         return urlWithoutProtocol.substring(0, domainEndPos);
-    },
-
-    /**
-     * isAjax 判定是否ajax请求
-     * @param  {object}  ctx 对象
-     * @return {Boolean}     是否是ajax请求
-     */
-    isAjax(ctx) {
-        return ('xmlhttprequest' === ((ctx.get('X-Requested-With') || '').toLowerCase())) || (ctx.get('accept').indexOf('json') > -1); // eslint-disable-line
     },
 
     /**
