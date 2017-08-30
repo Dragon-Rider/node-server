@@ -1,6 +1,6 @@
 # node-server
 
-基于Koa前后端分离的服务端脚本
+快速搭建基于Koa前后端分离的服务端脚本
 
 ## Getting started
 1. git clone https://github.com/Dragon-Rider/node-server.git  
