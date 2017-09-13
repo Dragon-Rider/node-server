@@ -14,7 +14,6 @@ apiRouter.get('/userInfo', async function (ctx, next) {
     let result = null;
 
     result = await userInfoContr.getUserinfo(ctx.request.ip);
-
     ctx.body = result;
 });
 
