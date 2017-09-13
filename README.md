@@ -1,5 +1,5 @@
 # node-server
-A Node.js SFB ( Separation of Front and Back ends ) project for building node server fastly and simply, based on [koa][2].   
+A Node.js SFB ( Separation of Front and Back ends ) project for building node server fastly and simply, based on [koa 2][2].   
 
 ## Install
 ```bash

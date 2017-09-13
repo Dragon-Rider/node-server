@@ -6,19 +6,19 @@ const Router = require('koa-router');
 
 const pageRouter = new Router();
 
-pageRouter.get('/page', function* () {
+pageRouter.get('/page', async function (ctx, next) {
     const params = {
         titel: 'Page Demo',
         content: 'Hello Koa!',
     };
 
-    yield this.render('page', {
+    await ctx.render('page', {
         params,
     });
 });
 
-pageRouter.get('/', function* () {
-    yield this.render('demo');
+pageRouter.get('/', async function(ctx, next) {
+    await ctx.render('demo');
 });
 
 module.exports = pageRouter;
