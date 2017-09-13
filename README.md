@@ -1,10 +1,24 @@
 # node-server
+A Node.js SFB ( Separation of Front and Back ends ) project for building node server fastly and simply, based on [koa][2].   
 
-快速搭建基于Koa前后端分离的服务端脚本
+## Install
+```bash
+$ git clone https://github.com/Dragon-Rider/node-server.git   
+$ cd  ./node-server    
+$ npm install  
+$ npm start  
+```
 
-## Getting started
-1. git clone https://github.com/Dragon-Rider/node-server.git  
-2. cd  ./node-server  
-3. npm install  
-4. npm start  
-5. 浏览器访问 http://localhost:8080/   
+## Local Running
+```
+http://localhost:8080/   
+```
+
+## Extended Articles
+- [美团点评点餐前后端分离实践][1] 
+
+## License
+MIT
+
+[1]: https://zhuanlan.zhihu.com/p/28704974?group_id=884563171543744512
+[2]: http://koajs.com/
