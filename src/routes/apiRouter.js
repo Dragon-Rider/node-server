@@ -10,7 +10,7 @@ const apiRouter = new Router({
     prefix: '/ajax',
 });
 
-apiRouter.get('/userInfo', async function (ctx, next) {
+apiRouter.get('/userInfo', async (ctx, next) => {
     let result = null;
 
     result = await userInfoContr.getUserinfo(ctx.request.ip);
