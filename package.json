@@ -1,13 +1,14 @@
 {
   "name": "node-server-demo",
   "author": "EragonJiang",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Node server demo based on koa",
   "keywords": ["node", "koa", "demo"],
   "scripts": {
-    "start": "pm2 start app.json --env pro",
+    "start": "NODE_ENV=production node app.js",
     "dev": "pm2 start app.json --env dev",
-    "dev1": "NODE_ENV=development node-dev --no-notify app.js",
+    "start-pm2": "pm2 start app.json --env pro",
+    "dev-pm2": "NODE_ENV=development node-dev --no-notify app.js",
     "shut": "pm2 delete all",
     "lint": "eslint ./src --fix"
   },
