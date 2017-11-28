@@ -1,0 +1,41 @@
+/**
+ * Application configuration section
+ * http://pm2.keymetrics.io/docs/usage/application-declaration/
+ * 多个服务，依次放到apps对应的数组里
+ */
+{
+    "apps": [{
+        "name": "node-server", // 应用名称
+        "max_memory_restart": "500M",
+        "script": "./app.js", // 实际启动脚本
+        "instances": 4, // 每次启动时的实例数目
+        "exec_mode"  : "cluster", // 采用集群模式
+        "watch": [ // 监控变化的目录，一旦变化，自动重启
+            "src",
+            "config",
+            "app.json"
+        ],
+        "ignore_watch": [ // 从监控目录中排除
+            "node_modules",
+            "logs"
+        ],
+        "watch_options":
+        {
+            "followSymlinks": false
+        },
+        "log_date_format": "YYYY-MM-DD HH:mm Z", // 每条日志加上时间
+        "combine_logs": true, // 合并相同集群里的多个实例的日志
+        "error_file": "./logs/app-err.log", // 错误日志路径
+        "out_file": "./logs/app-out.log", // 普通日志路径
+        "env_pro": {
+            "NODE_ENV": "production", // 环境参数，当前指定为生产环境
+            "REMOTE_ADDR": "http://www.example.com/",
+            "PORT": 3000
+        },
+        "env_dev": {
+            "NODE_ENV": "development", // 环境参数，当前指定为开发环境
+            "REMOTE_ADDR": "http://www.example.com/",
+            "PORT": 8080
+        },
+    }]
+}

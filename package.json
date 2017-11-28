@@ -1,26 +1,24 @@
 {
   "name": "node-server-demo",
   "author": "EragonJiang",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Node server demo based on koa",
-  "keywords": [
-    "node",
-    "koa",
-    "demo"
-  ],
+  "keywords": ["node", "koa", "demo"],
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "dev": "NODE_ENV=development node-dev --no-notify app.js",
+    "dev": "pm2 start app.json --env dev",
+    "start-pm2": "pm2 start app.json --env pro",
+    "dev-pm2": "NODE_ENV=development node-dev --no-notify app.js",
+    "shut": "pm2 delete all",
     "lint": "eslint ./src --fix"
   },
   "dependencies": {
     "koa": "^2.3.0",
-    "koa-ejs": "^3.0.0",
-    "koa-logger": "^1.3.0",
-    "koa-mount": "^2.0.0",
+    "koa-ejs": "^4.0.0",
+    "koa-mount": "^3.0.0",
     "koa-onerror": "^3.1.0",
-    "koa-router": "^5.1.2",
-    "koa-static": "^3.0.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.0",
     "mysql": "^2.14.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
@@ -36,7 +34,7 @@
   },
   "license": "MITs",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=7.6.0"
   },
   "repository": {
     "type": "git",
