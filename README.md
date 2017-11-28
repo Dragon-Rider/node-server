@@ -16,7 +16,7 @@ http://localhost:8080/page
 http://localhost:8080/ajax/userInfo
 ```
 
-## Use PM2 to Start Up
+## Use PM2 To Start Up
 app.json is the config for PM2. And `pm2-logrotate` can collect and rotate the logs everyday.
 ```
 $ npm install pm2 -g
